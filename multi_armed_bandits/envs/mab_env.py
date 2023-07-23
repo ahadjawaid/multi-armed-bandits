@@ -26,7 +26,7 @@ class MultiArmedBanditEnv(gym.Env):
                                 for _ in range(n_bandits)]
 
     def step(self, action: int) -> tuple:
-        OBSERVATION = np.array([0])
+        OBSERVATION = 0
         TERMINATED = True
         TRUNCATED = False
         INFO = {}
@@ -35,8 +35,13 @@ class MultiArmedBanditEnv(gym.Env):
         
         return OBSERVATION, reward, TERMINATED, TRUNCATED, INFO
 
-    def reset(self) -> None:
-        pass
+    def reset(self, seed=None, options={}) -> None:
+        OBSERVATION = 0
+        INFO = {}
+
+        np.random.seed(seed)
+
+        return OBSERVATION, INFO
 
 def random_float(lowerbound: float, upperbound: float) -> float:
     return np.random.uniform(lowerbound, upperbound)
