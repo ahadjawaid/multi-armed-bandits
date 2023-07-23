@@ -26,13 +26,14 @@ class MultiArmedBanditEnv(gym.Env):
                                 for _ in range(n_bandits)]
 
     def step(self, action: int) -> tuple:
-        OBSERVATION = 0
+        OBSERVATION = np.array([0])
         TERMINATED = True
+        TRUNCATED = False
         INFO = {}
 
         reward = self.bandits[action].sample()
         
-        return OBSERVATION, TERMINATED, reward, {"prob": 1}, INFO
+        return OBSERVATION, reward, TERMINATED, TRUNCATED, INFO
 
     def reset(self) -> None:
         pass
