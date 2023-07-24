@@ -17,7 +17,7 @@ pip install .
 ```
 
 ## Usage
-There are 2-10 multi armed bandit environment already regisitered for your use you can make one as shown in the following code.
+There are 2 up to 10 armed bandit environment already regisitered for you to use. Here's an example of using a premade registered Multi-armed Bandit environment:
 
 ```python
 import gym
@@ -27,7 +27,7 @@ env.reset()
 _, reward, _, _, _ = env.step()
 ```
 
-Similarlly we can use up to 10 arms for the preregistered environments
+Similarly we can use up to 10 arms for the preregistered environments.
 
 ```python
 import gym
@@ -37,7 +37,7 @@ env.reset()
 _, reward, _, _, _ = env.step()
 ```
 
-And if you want to define your own multi armed bandit with your own configuration you can do it as shown
+And if you want to define your own customly configured multi-armed bandit you can do it as shown:
 
 ```python
 from multi_armed_bandits.envs import MultiArmedBanditEnv
