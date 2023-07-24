@@ -27,8 +27,7 @@ env.reset()
 _, reward, _, _, _ = env.step()
 ```
 
-Similarlly we can create a multi armed bandit with up to 10 arms
-
+Similarlly we can use up to 10 arms for the preregistered environments
 
 ```python
 import gym
