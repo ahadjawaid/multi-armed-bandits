@@ -1,6 +1,6 @@
 from setuptools import setup
 
-setup(name='multi_armed_bandit',
+setup(name='multi_armed_bandits',
       version='0.01',
       description='Package contains multi-armed bandit environments',
       url='https://github.com/ahadjawaid/multi-armed-bandits',
