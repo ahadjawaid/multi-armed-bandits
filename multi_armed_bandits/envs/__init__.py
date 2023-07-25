@@ -1,1 +1,2 @@
-from multi_armed_bandits.envs.mab_env import MultiArmedBanditEnv
+from multi_armed_bandits.envs.mab_env import MultiArmedBanditEnv, NormalBandit
+from multi_armed_bandits.envs.multi_armed_bandit_env import RandomContextualBandit
