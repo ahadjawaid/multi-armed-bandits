@@ -8,5 +8,5 @@ setup(name='multi_armed_bandits',
       packages=['multi_armed_bandits', 'multi_armed_bandits.envs'],
       author_email='',
       license='MIT License',
-      install_requires=['gym>=0.2.3'],
+      install_requires=['gym>=0.2.3', 'numpy'],
 )
