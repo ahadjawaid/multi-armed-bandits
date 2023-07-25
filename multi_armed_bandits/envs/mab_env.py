@@ -16,8 +16,9 @@ class NormalBandit:
 
 
 class MultiArmedBanditEnv(gym.Env):
-    def __init__(self, n_bandits: int, lowerbound_mean=-3, upperbound_mean=3, 
-                 lowerbound_std=0.5, upperbound_std=2.5):
+    def __init__(self, n_bandits: int, 
+                 lowerbound_mean: float = -3., upperbound_mean: float = 3., 
+                 lowerbound_std: float = 0.5, upperbound_std: float = 2.5):
         self.action_space = Discrete(n_bandits)
         self.observation_space = Discrete(1)
 
@@ -35,11 +36,14 @@ class MultiArmedBanditEnv(gym.Env):
         
         return OBSERVATION, reward, TERMINATED, TRUNCATED, INFO
 
-    def reset(self, seed=None, options={}) -> None:
+    def reset(self, seed: int = None, options: dict = {}) -> None:
+        np.random.seed(seed)
+
+        if "bandits" in options:
+            self.bandits = options["bandits"]
+
         OBSERVATION = 0
         INFO = {}
-
-        np.random.seed(seed)
 
         return OBSERVATION, INFO
 
