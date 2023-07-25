@@ -26,7 +26,7 @@ There are 2 up to 10 armed bandit environment already regisitered for you to use
 ```python
 import gym
 
-env = gym.make("2-Armed-Bandit")
+env = gym.make("2-armed-bandit")
 env.reset()
 _, reward, _, _, _ = env.step()
 ```
@@ -36,7 +36,7 @@ Similarly we can use up to 10 arms for the preregistered environments.
 ```python
 import gym
 
-env = gym.make("10-Armed-Bandit")
+env = gym.make("10-armed-bandit")
 env.reset()
 _, reward, _, _, _ = env.step()
 ```
@@ -46,12 +46,10 @@ An example with contextual bandit environment:
 ```python
 import gym
 
-env = gym.make("3-Context-5-Armed-Bandit")
+env = gym.make("3-context-5-armed-bandit")
 env.reset()
 _, reward, _, _, _ = env.step()
 ```
-
-
 
 And if you want to define your own customly configured multi-armed bandit you can do it as shown:
 
