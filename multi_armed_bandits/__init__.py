@@ -18,5 +18,4 @@ def register_environments():
                 nondeterministic=True,
             )
 
-if __name__ == "__main__":
-    register_environments()
+register_environments()
